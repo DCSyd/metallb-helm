@@ -12,9 +12,9 @@ targetCustomizations:
         ipAddressPools:
         - name: default
           #protocol: layer2
-          ipAddressPool:
-            addresses:
-            - 192.168.86.4/30
+         # ipAddressPool:
+          addresses:
+          - 192.168.86.4/30
           auto-assign: false
   clusterSelector:
     matchLabels:
@@ -27,9 +27,9 @@ targetCustomizations:
         ipAddressPools:
         - name: default
           #protocol: layer2
-          ipAddressPool:
-            addresses:
-            - 192.168.86.8/30
+          #ipAddressPool:
+          addresses:
+          - 192.168.86.8/30
           auto-assign: false
   clusterSelector:
     matchLabels:
