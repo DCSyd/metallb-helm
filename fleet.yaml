@@ -8,14 +8,14 @@ targetCustomizations:
 - name: site1
   helm:
     values:
-      configInline:
+      L2Advertisement: ##BGPAdvertisement for BGP
         address-pools:
         - name: default
-          protocol: layer2
+          #protocol: layer2
           addresses:
           - 10.100.152.41-10.100.152.43
         - name: rsyslog
-          protocol: layer2
+          #protocol: layer2
           addresses:
           - 192.168.32.4/24
           auto-assign: false
@@ -26,14 +26,14 @@ targetCustomizations:
 - name: site2
   helm:
     values:
-      configInline:
+      L2Advertisement: ##BGPAdvertisement for BGP
         address-pools:
         - name: default
-          protocol: layer2
+          #protocol: layer2
           addresses:
           - 10.100.152.73-10.100.152.75
         - name: rsyslog
-          protocol: layer2
+          #protocol: layer2
           addresses:
           - 192.168.32.4/24
           auto-assign: false
