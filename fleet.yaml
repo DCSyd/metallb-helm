@@ -10,12 +10,14 @@ targetCustomizations:
     values:
       L2Advertisement: ##BGPAdvertisement for BGP
         ipAddressPools:
-        - name: default
+        - default
+      ipAddressPool:
+      - name: default
           #protocol: layer2
          # ipAddressPool:
-          addresses:
-          - 192.168.86.4/30
-          auto-assign: false
+        addresses:
+        - 192.168.86.4/30
+        auto-assign: false
   clusterSelector:
     matchLabels:
       site: site1
@@ -25,12 +27,14 @@ targetCustomizations:
     values:
       L2Advertisement: ##BGPAdvertisement for BGP
         ipAddressPools:
-        - name: default
+        - default
+      ipAddressPool:
+      - name: default
           #protocol: layer2
-          #ipAddressPool:
-          addresses:
-          - 192.168.86.8/30
-          auto-assign: false
+         # ipAddressPool:
+        addresses:
+        - 192.168.86.8/30
+        auto-assign: false
   clusterSelector:
     matchLabels:
       site: site2
