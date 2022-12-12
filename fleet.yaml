@@ -9,15 +9,11 @@ targetCustomizations:
   helm:
     values:
       L2Advertisement: ##BGPAdvertisement for BGP
-        address-pools:
+        ipAddressPools:
         - name: default
           #protocol: layer2
-          addresses:
-          - 10.100.152.41-10.100.152.43
-        - name: rsyslog
-          #protocol: layer2
-          addresses:
-          - 192.168.32.4/24
+          ipAddressPool:
+          - 192.168.86.4/30
           auto-assign: false
   clusterSelector:
     matchLabels:
@@ -27,15 +23,16 @@ targetCustomizations:
   helm:
     values:
       L2Advertisement: ##BGPAdvertisement for BGP
-        address-pools:
+        ipAddressPools:
         - name: default
           #protocol: layer2
-          addresses:
-          - 10.100.152.73-10.100.152.75
-        - name: rsyslog
+          ipAddressPool:
+          - 192.168.86.8/30
+          auto-assign: false
+        - name: dummy
           #protocol: layer2
-          addresses:
-          - 192.168.32.4/24
+          ipAddressPool:
+          - 192.168.86.248/33
           auto-assign: false
   clusterSelector:
     matchLabels:
