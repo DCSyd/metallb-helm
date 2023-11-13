@@ -3,37 +3,37 @@ helm:
   releaseName: metallb
   repo: https://metallb.github.io/metallb
   chart: metallb
-targetCustomizations:
-- name: site1
-  helm:
-    values:
-      L2Advertisement: ##BGPAdvertisement for BGP
-        ipAddressPools:
-        - default
-      ipAddressPool:
-      - name: default
-          #protocol: layer2
-         # ipAddressPool:
-        addresses:
-        - 192.168.86.4/30
-        auto-assign: false
-  clusterSelector:
-    matchLabels:
-      site: site1
-      
-- name: site2
-  helm:
-    values:
-      L2Advertisement: ##BGPAdvertisement for BGP
-        ipAddressPools:
-        - default
-      ipAddressPool:
-      - name: default
-          #protocol: layer2
-         # ipAddressPool:
-        addresses:
-        - 192.168.86.8/30
-        auto-assign: false
-  clusterSelector:
-    matchLabels:
-      site: site2
+#targetCustomizations:
+#- name: site1
+#  helm:
+#    values:
+#      L2Advertisement: ##BGPAdvertisement for BGP
+#        ipAddressPools:
+#        - default
+#      ipAddressPool:
+#      - name: default
+#          #protocol: layer2
+#         # ipAddressPool:
+#        addresses:
+#        - 192.168.86.4/30
+#        auto-assign: false
+#  clusterSelector:
+#    matchLabels:
+#      site: site1
+#      
+#- name: site2
+#  helm:
+#    values:
+#      L2Advertisement: ##BGPAdvertisement for BGP
+#        ipAddressPools:
+#        - default
+#      ipAddressPool:
+#      - name: default
+#          #protocol: layer2
+#         # ipAddressPool:
+#        addresses:
+#        - 192.168.86.8/30
+#        auto-assign: false
+#  clusterSelector:
+#    matchLabels:
+#      site: site2
