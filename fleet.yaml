@@ -1,9 +1,8 @@
-defaultNamespace: metallb-system
+namespace: metallb-system
 helm:
   releaseName: metallb
   repo: https://metallb.github.io/metallb
   chart: metallb
-
 targetCustomizations:
 - name: site1
   helm:
@@ -21,7 +20,7 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       site: site1
-
+      
 - name: site2
   helm:
     values:
@@ -38,4 +37,3 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       site: site2
-
